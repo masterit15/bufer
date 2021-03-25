@@ -161,7 +161,6 @@
       "version": "2.0.2",
       "resolved": "https://registry.npmjs.org/@cloudcmd/create-element/-/create-element-2.0.2.tgz",
       "integrity": "sha512-5b74qCgwEUx+GxzXC9Gwamgh4Rx5ouLSrCW+QbaBHWpxA5s1sw5i6MbSODfuts1MSX5RoaZjJAjNY5y3et1iXw==",
-      "dev": true,
       "requires": {
         "currify": "^4.0.0",
         "fullstore": "^3.0.0"
@@ -4815,8 +4814,7 @@
     "currify": {
       "version": "4.0.0",
       "resolved": "https://registry.npmjs.org/currify/-/currify-4.0.0.tgz",
-      "integrity": "sha512-ABfH28PWp5oqqp31cLXJQdeMqoFNej9rJOu84wKhN3jPCH7FAZg3zY1MVI27PTFoqfPlxOyhGmh9PzOVv+yN2g==",
-      "dev": true
+      "integrity": "sha512-ABfH28PWp5oqqp31cLXJQdeMqoFNej9rJOu84wKhN3jPCH7FAZg3zY1MVI27PTFoqfPlxOyhGmh9PzOVv+yN2g=="
     },
     "custom-event": {
       "version": "1.0.1",
@@ -7268,8 +7266,7 @@
     "fullstore": {
       "version": "3.0.0",
       "resolved": "https://registry.npmjs.org/fullstore/-/fullstore-3.0.0.tgz",
-      "integrity": "sha512-EEIdG+HWpyygWRwSLIZy+x4u0xtghjHNfhQb0mI5825Mmjq6oFESFUY0hoZigEgd3KH8GX+ZOCK9wgmOiS7VBQ==",
-      "dev": true
+      "integrity": "sha512-EEIdG+HWpyygWRwSLIZy+x4u0xtghjHNfhQb0mI5825Mmjq6oFESFUY0hoZigEgd3KH8GX+ZOCK9wgmOiS7VBQ=="
     },
     "function-bind": {
       "version": "1.1.1",
@@ -9651,6 +9648,17 @@
                 "is-extendable": "^0.1.0"
               }
             }
+          }
+        },
+        "fsevents": {
+          "version": "1.2.13",
+          "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz",
+          "integrity": "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==",
+          "dev": true,
+          "optional": true,
+          "requires": {
+            "bindings": "^1.5.0",
+            "nan": "^2.12.1"
           }
         },
         "glob-parent": {
@@ -14359,7 +14367,6 @@
       "version": "4.0.7",
       "resolved": "https://registry.npmjs.org/smalltalk/-/smalltalk-4.0.7.tgz",
       "integrity": "sha512-aYZLc6qegvJzbUK68Ay4/TnXRkiSKfXH7XTjiBR5DQrUSvtMA/j/y5Y6CiI23pYZifYzlm8oBQW3l1WoPf6J8w==",
-      "dev": true,
       "requires": {
         "@cloudcmd/create-element": "^2.0.0",
         "currify": "^4.0.0",
@@ -17015,6 +17022,17 @@
             }
           }
         },
+        "fsevents": {
+          "version": "1.2.13",
+          "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz",
+          "integrity": "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==",
+          "dev": true,
+          "optional": true,
+          "requires": {
+            "bindings": "^1.5.0",
+            "nan": "^2.12.1"
+          }
+        },
         "glob-parent": {
           "version": "3.1.0",
           "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-3.1.0.tgz",
@@ -17931,6 +17949,17 @@
                 "is-extendable": "^0.1.0"
               }
             }
+          }
+        },
+        "fsevents": {
+          "version": "1.2.13",
+          "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz",
+          "integrity": "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==",
+          "dev": true,
+          "optional": true,
+          "requires": {
+            "bindings": "^1.5.0",
+            "nan": "^2.12.1"
           }
         },
         "glob-parent": {

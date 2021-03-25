@@ -3,7 +3,6 @@ import axios from 'axios'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-import VueContext from '../../node_modules/vue-context/src/js/index'
 import smalltalk from '../../node_modules/smalltalk/lib/smalltalk'
 import App from './App'
 import router from './router'
@@ -13,7 +12,6 @@ const fs = require('fs')
 const path = require('path')
 import chokidar from 'chokidar';
 import Event from 'events';
-
 const EventEmitter  = Event.EventEmitter
 
 class Observer extends EventEmitter {
@@ -65,7 +63,7 @@ Vue.prototype.$path = path
 Vue.prototype.$watchet = new Observer();
 Vue.prototype.$smalltalk = smalltalk
 Vue.config.productionTip = false
-Vue.component('VueContext', VueContext)
+Vue.config.devtools = false
 Vue.component('Avatar', Avatar)
 /* eslint-disable no-new */
 new Vue({

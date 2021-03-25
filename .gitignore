@@ -5,6 +5,8 @@ build/*
 !build/icons
 coverage
 node_modules/
+server/node_modules/
+server/uploads/
 npm-debug.log
 npm-debug.log.*
 thumbs.db

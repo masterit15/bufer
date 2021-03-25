@@ -7,7 +7,7 @@ import { app, ipcMain, BrowserWindow, powerMonitor } from 'electron'
 if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
 }
-
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
@@ -29,16 +29,16 @@ function createWindow () {
     height: 700,
     minWidth: 900,
     minHeight: 600,
-    movable: true,//может ли окно перемещаться. В Linux это не реализовано
-    opacity: 0.95,
-    frame: false,
+    // movable: true,//может ли окно перемещаться. В Linux это не реализовано
+    opacity: 1,
+    frame: true,
     visualEffectState: 'active',
     vibrancy: "sidebar",
     
     // vibrancyState: 'active',
     //transparent: true,
     //backgroundColor: "#00000000",
-    titleBarStyle: 'hiddenInset',
+    // titleBarStyle: 'hiddenInset',
     webPreferences: {
       nodeIntegration: true,
       // nodeIntegrationInWorker: true

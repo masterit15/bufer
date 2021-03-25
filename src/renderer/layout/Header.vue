@@ -1,6 +1,8 @@
 <template>
   <div id="header">
-    <div class="user_container" @click="notice">
+    <div class="user_container">
+      <avatar :username="username" :size="42"></avatar>
+      {{ username }}
       <div 
         v-bind:class="this.notifyed.length > 0 ? 'notice is_active' : 'notice'" ref="notice" 
         @click="shownotify=!shownotify"
@@ -8,14 +10,15 @@
           <i class="fa fa-bell-o"></i>
           <span class="notice_count">{{ notifyed.length >= 99 ? 99 :  notifyed.length }}</span>
         </div>
-      <avatar :username="username" :size="42"></avatar>
+      
       <u class="notice_list">
         <li v-for="(notice, i) in notifyed" :key="notice.title+'-'+i" class="notice_item">
-        <div class="notice_item_wrap" :style="{backgroundColor: notice.bgColor, color: notice.color}">
-          <h6><i :class="'fa '+notice.icon" @click="closeNotify($event, i)"></i> {{notice.title}}</h6>
-          <p>{{notice.text}}</p>
-        </div>
-      </li>
+          <span class="notice_item_close" @click="closeNotify($event, i)"><i class="fa fa-times" ></i></span>
+          <div class="notice_item_wrap" :style="{backgroundColor: notice.bgColor, color: notice.color}">
+            <h6><i :class="'fa '+notice.icon"></i> {{notice.title}}</h6>
+            <p>{{notice.text}}</p>
+          </div>
+        </li>
       </u>
     </div>
   </div>
@@ -47,7 +50,6 @@ export default {
     shownotify(){
       let noti_item =  document.querySelectorAll('.notice_item')
       let notify_list = document.querySelector('.notice_list')
-      console.log(notify_list)
       if(this.shownotify){
         notify_list.classList.add('active')
         tl.to(noti_item, { x: 0, opacity: 1, duration: .2, stagger: 0.1 })
@@ -77,21 +79,20 @@ export default {
         audio: this.$path.join(__dirname, '/static/notify.mp3'),
         hasReply: true
       });
-      console.log(myNotification)
-      myNotification.onclick = () => {
-        console.log('Notification clicked')
-        myNotification.close()
-      }
-      // setInterval(()=>{
-      //   myNotification.shownotify()
-      // }, 3000)
+      // console.log(myNotification)
+      // myNotification.onclick = () => {
+      //   console.log('Notification clicked')
+      //   myNotification.close()
+      // }
+      // // setInterval(()=>{
+      // //   myNotification.shownotify()
+      // // }, 3000)
     },
     closeNotify($event, i){
       let that = this
-      let noti_item =  document.querySelectorAll('.noti_item')
-      let height = noti_item[i].height
-      tl.to(noti_item[i], { y: 100, opacity: 0, duration: .2, stagger: 0.1 })
-        .then(function (res) {
+      let item = $event.target.closest('li')
+      tl.to(item, { y: 100, opacity: 0, duration: .2, stagger: 0.1 })
+        .then(() => {
           that.notifyed.splice(i, 1)
         })
     },
