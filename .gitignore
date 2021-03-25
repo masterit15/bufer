@@ -5,6 +5,7 @@ build/*
 !build/icons
 coverage
 node_modules/
+bufer/
 server/node_modules/
 server/uploads/
 npm-debug.log
